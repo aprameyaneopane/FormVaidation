@@ -59,11 +59,14 @@ function validateForm() {
         document.getElementById('password').style.border = '2px solid red';
     }
 
-    if (RePass == "" || RePass !== password) {
+    if (RePass == "") {
         alertRePassword.innerHTML = "Confirm Password";
         document.getElementById('re-password').style.border = '2px solid red';
-        return false;
+    }
 
+    else if (RePass !== "" && RePass !== password) {
+        alertRePassword.innerHTML = "Passwords do not match";
+        document.getElementById('re-password').style.border = '2px solid red';
     }
 
     if (fname != "" && lname != "" && (email != "" && email.match(mailformat)) && (RePass != "" && RePass == password)) {
