@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Form</title>
+</head>
+
+<body>
+    <form name="myForm" action="#" method="get">
+        <h1>Form Form Form</h1>
+
+        <input type="text" name="fname" placeholder="First Name" id="fname" />
+        <div id="alert-fname" class="error"></div>
+
+        <input type="text" name="lname" placeholder="Last Name" id="lname" />
+        <div id="alert-lname" class="error"></div>
+
+        <input type="email" name="email" placeholder="Email" id="email" />
+        <div id="alert-email" class="error"></div>
+
+        <input type="password" name="password" placeholder="Password" id="password" />
+        <div id="alert-password" class="error"></div>
+
+        <input type="password" name="re-password" placeholder="Confirm Password" id="re-password" />
+        <div id="alert-repassword" class="error"></div>
+
+        <input type="submit" value="Submit" id="sub" onclick="return validateForm()" />
+        <div id="status"></div>
+    </form>
+    <script src="main.js"></script>
+</body>
+
+</html>
